@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo">HappyNatsu10</a>
+
+        <nav class="nava">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#skills">Services</a>
+            <a href="#contact-us">Contact</a>
+        </nav>
+        <div class="log">
+            <a class="a1" href="login.html" target="_blank">Log in</a>
+            <div id="left"></div>
+            <a class="a1" href="signup.html" target="_blank">Sign up</a>
+
+        </div>
+
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>  
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li><a href="#skills">Services</a></li>
+            <li><a href="#contact-us">Contact</a></li>
+            <li><a class="a1" href="login.html" target="_blank">Log in</a></li>
+            <li><a class="a1" href="signup.html" target="_blank">Sign up</a></li>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="CSS/Images/Slider Image/2599272.jpg" alt="" >
+                <img id="slide-2" src="CSS/Images/Slider Image/wallpapersden.com_anime-landscape-mountains-peak_1920x1080.jpg" alt="" >
+                <img id="slide-3" src="CSS/Images/Slider Image/wallpapersden.com_cool-hd-edge-of-clouds_1920x1080.jpg" alt="" >
+                <img id="slide-4" src="CSS/Images/Slider Image/wallpapersden.com_happiest-anime-girl-hd-ai-art_1920x1080.jpg" alt="" >
+                <img id="slide-5" src="CSS/Images/Slider Image/wallpapersden.com_landscape-starry-blossoms_1920x1080.jpg" alt="" >
+                <!-- <img id="slide-6" src="" alt="" > -->
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+
+            </div>
+
+        </div>
+
+   </section>
+
+    <script>
+        const toggleBtn =document.querySelector('.toggle_btn')
+        const toggleBtnIcon =document.querySelector('.toggle_btn i')
+        const dropDownMenu =document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>   
+
+</body>
+</html>
